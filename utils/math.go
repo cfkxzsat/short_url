@@ -2,6 +2,7 @@ package utils
 
 import (
 	"strconv"
+	"strings"
 )
 
 var (
@@ -31,6 +32,14 @@ func IdToString(id int) (res string) {
 		d := id % Length
 		id = id / Length
 		res = string(Token[d]) + res
+	}
+	return res
+}
+
+func StringToId(str string) (res int) {
+	for _, s := range str {
+		val := strings.Index(Token, string(s))
+		res = res*Length + val
 	}
 	return res
 }
