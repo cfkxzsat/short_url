@@ -1,2 +1,2 @@
 # short_url
-a project from internet
+短连接服务
